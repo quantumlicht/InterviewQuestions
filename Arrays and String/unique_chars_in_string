@@ -1,0 +1,17 @@
+var test_string = "abcaa";
+var test_string1 = "abcde";
+
+function isStringUniqueCharsOnly(str){
+    var countMap = {};
+
+    for(var i=0; i < str.length; i++) {
+        if (countMap[str[i]] && countMap[str[i]] > 0) {
+            return false;
+        }
+        countMap[str[i]] = 1;
+    }
+    return true;
+}
+
+
+console.log(isStringUniqueCharsOnly(test_string),isStringUniqueCharsOnly(test_string1));
